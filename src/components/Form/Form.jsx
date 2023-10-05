@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from "react";
 import { employeeDesignations } from "../../constants/constants";
-import DatePicker, { CalendarContainer } from "react-datepicker";
 import { createEmployeeEntry, getAllEmployees } from "../../dbFunctions";
+import { ArrowIcon } from "../../assets/Arrow";
+
 import "./../../styles/formStyles.css"
 
+import DatePicker, { CalendarContainer } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { ArrowIcon } from "../../assets/Arrow";
+import ReactDatePicker from "../DatePicker/DatePicker";
 
 function EmployeeForm(){
 
@@ -51,6 +53,21 @@ function EmployeeForm(){
     const alterSaveFlag2 = () => {
 
         setSaveFlag2(0)
+    }
+
+    const handleDateChange = (date) => {
+      // Update the formData.startDate when a date is selected
+        setFormData({
+          ...formData,
+          startDate: date 
+        });
+    };
+    
+    const handleEndDateChange = (date) => {
+         setFormData({
+           ...formData,
+           endDate: date 
+         });
     }
 
     useEffect(() => {
@@ -138,7 +155,7 @@ function EmployeeForm(){
                 </div>
 
                 <div className="flex-container">
-                <DatePicker
+                {/* <DatePicker
                     selected={formData.startDate === new Date() ? "Today" : formData.startDate}
                     onChange={(date) => setFormData({...formData, startDate : date})}
                     showIcon
@@ -155,11 +172,22 @@ function EmployeeForm(){
                     onCalendarClose={() => setSaveFlag(0)}
                     calendarContainer={calendarContainer}
                     // renderCustomHeader={}
+                /> */}
+                <ReactDatePicker
+                 selectedDate={formData.startDate}
+                 handleDateChange={handleDateChange}
+                 startDate={formData.startDate}
+                 endDate={formData.endDate}
+                 saveFlag={saveFlag} // Pass saveFlag state
+                 setSaveFlag={setSaveFlag} // Pass setSaveFlag function
+                 alterSaveFlag={alterSaveFlag}
+                 startDateSelector={true}
+                 endDateSelector={false}
                 />
                 <div>
                     <ArrowIcon color={'#1da1f2'} width={"20px"} height={"20px"}/>
                 </div>
-                <DatePicker
+                {/* <DatePicker
                     selected={formData.endDate}
                     onChange={(date) => setFormData({...formData, endDate : date})}
                     showIcon
@@ -175,6 +203,17 @@ function EmployeeForm(){
                     onInputClick={() => setSaveFlag2(1)}
                     onCalendarClose={() => setSaveFlag2(0)}
                     calendarContainer={calendarContainer2}
+                /> */}
+                 <ReactDatePicker
+                 selectedDate={formData.endDate}
+                 handleDateChange={handleEndDateChange}
+                 startDate={formData.startDate}
+                 endDate={formData.endDate}
+                 saveFlag={saveFlag2} // Pass saveFlag state
+                 setSaveFlag={setSaveFlag2} // Pass setSaveFlag function
+                 alterSaveFlag={alterSaveFlag2}
+                 startDateSelector={false}
+                 endDateSelector={true}
                 />
                 </div>
 
