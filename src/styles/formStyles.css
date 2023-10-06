@@ -11,9 +11,62 @@
     min-width: 100px;
 }
 
+/* .flex-container{
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+} */
+
+.flex-container {
+    display: flex;
+    /* max-width: 400px; */
+    /* flex-flow: column; */
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid; */
+    margin: auto;
+}
+
+.flex-container > div{
+    flex: 1;
+    /* margin: 10px; */
+}
+
+form{
+    padding: 20px;
+}
+
+input, select{
+    margin-bottom: 20px;
+}
+
+.react-datepicker-wrapper{
+    width: 150px;
+}
+
+.calendar-icon{
+    margin-right: -23px;
+    margin-top: 5px;
+    z-index: 99;
+}
+
 @media screen and (min-width: 401px) {
     .custom-date-button-container{
         width: 385.9px;
         
     }
   }
+
+  @media screen and (min-width: 518px) {
+    .flex-container{
+        flex-flow: row;
+        
+    }
+    .react-datepicker-wrapper {
+        width: max-content;
+    }
+  }  
