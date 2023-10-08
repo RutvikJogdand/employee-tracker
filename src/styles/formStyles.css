@@ -53,7 +53,7 @@ select{
 }
 
 .form-footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     border-top: 1px solid #F2F2F2;
     width: 95%;
