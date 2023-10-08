@@ -2,8 +2,9 @@ import db from './db';
 
 // Create a new employee entry
 export async function createEmployeeEntry(data) {
-  console.log('data employee', data)
-  return await db.employees.add(data);
+    const getNewEmp = await db.employees.add(data);
+    return getNewEmp
+  
 }
 
 // Read all employees
