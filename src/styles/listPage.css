@@ -22,7 +22,7 @@
 }
 
 .add-button-container{
-    position: relative;
+    position: fixed;
     border: 1px solid #F2F2F2;
     width: 100%;
     height: 90px;

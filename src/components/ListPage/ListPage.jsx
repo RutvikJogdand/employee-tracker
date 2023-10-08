@@ -121,7 +121,7 @@ function ListPage(props){
 
                 {
                     contacts && contacts.length === 0 ?
-                    <img src={nothingFound}/>
+                    <img style={{width:"100%"}} src={nothingFound}/>
                     :
                     <div>
                     {/* Current Employees: */}
@@ -177,9 +177,12 @@ function ListPage(props){
                         }
 
                         {/* Previous Employees: */}
-                        <div className="employee-differentiator">
-                                Previous Employees
-                        </div>
+                        {
+                            contacts && contacts.filter(item => item.endDate !== null).length !== 0 &&
+                            <div className="employee-differentiator">
+                                    Previous Employees
+                            </div>
+                        }
                         {
                             contacts && contacts.filter(item => item.endDate !== null).map(item => {
                                 return(
