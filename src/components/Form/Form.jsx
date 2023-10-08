@@ -185,13 +185,7 @@ function EmployeeForm(props){
             <CalendarContainer className={className}>
                 <div className="custom-date-button-container">
                     <button className="btn start-calendar-btn" onClick={() => setFormData({...formData, endDate: null})}>No Date</button>
-                    <button className="btn start-calendar-btn" onClick={() => {
-                      if(new Date(formData.startDate) < new Date(formData.end)){
-                        setFormData({...formData, endDate: new Date(formData.startDate)})
-                      }
-
-                      }
-                      }>Today</button>
+                    <button className="btn start-calendar-btn" onClick={() => {setFormData({...formData, endDate: new Date(formData.startDate)})}}>Today</button>
                 </div>
               <div style={{ position: "relative" }}>
                 {children}
