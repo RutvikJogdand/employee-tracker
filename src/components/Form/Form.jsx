@@ -97,6 +97,7 @@ function EmployeeForm(props){
     const handleNextMondayStartDate = () => {
       const today = new Date();
       const daysUntilNextMonday = (7 - today.getDay() + 1) % 7;
+      console.log('days until next monday', 7 - today.getDay() + 1)
       const nextMonday = new Date(today);
       nextMonday.setDate(today.getDate() + daysUntilNextMonday);
 
@@ -184,7 +185,13 @@ function EmployeeForm(props){
             <CalendarContainer className={className}>
                 <div className="custom-date-button-container">
                     <button className="btn start-calendar-btn" onClick={() => setFormData({...formData, endDate: null})}>No Date</button>
-                    <button className="btn start-calendar-btn" onClick={() => setFormData({...formData, endDate: new Date()})}>Today</button>
+                    <button className="btn start-calendar-btn" onClick={() => {
+                      if(new Date(formData.startDate) < new Date(formData.end)){
+                        setFormData({...formData, endDate: new Date(formData.startDate)})
+                      }
+
+                      }
+                      }>Today</button>
                 </div>
               <div style={{ position: "relative" }}>
                 {children}
