@@ -285,6 +285,9 @@ function ListPage(props){
                         </div>
                     </div>
                 </div>
+                <div class="spacer">
+                    &nbsp;
+                </div>
                 <div className="add-button-container">
                     <div className="helper-text-container">
                         <p>Swipe left to delete or edit</p>
