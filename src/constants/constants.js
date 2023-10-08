@@ -1,0 +1,1 @@
+export const employeeDesignations = ["Senior_Software_Developer", "Full-stack_Developer", "Product_Designer", "Flutter_Developer", "QA_Tester", "Product_Owner"]

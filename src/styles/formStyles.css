@@ -1,0 +1,163 @@
+.custom-date-button-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 273.9px;
+    
+}
+
+.custom-date-button-container > button{
+    flex: 1;
+    margin: 5px;
+    min-width: 100px;
+}
+
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.flex-container > div{
+    flex: 1;
+}
+
+form{
+    padding: 20px;
+}
+
+.form-name-input{
+    margin-bottom: 2px;
+    width: 95%;
+    padding: 5px;
+}
+
+.form-name-input:focus{
+    outline: none;
+}
+
+.react-datepicker-wrapper{
+    width: 150px;
+}
+
+.calendar-icon{
+    margin-right: -23px;
+    margin-top: 5px;
+    z-index: 99;
+}
+
+select{
+    border: none;
+}
+
+.form-footer{
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #F2F2F2;
+    width: 95%;
+    padding: 10px 10px;
+}
+
+.form-footer > button{
+    border-radius: 5px;
+    margin-left: 5px;
+    padding: 7px 10px;
+    border: none;
+    width: 80px;
+    float: right;
+}
+
+.cancel{
+    background: #EDF8FF;
+    color: aqua;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.form-save{
+    background: #1DA1F2;
+    color: white;
+    margin-right: 15px;
+}
+
+.form-save:focus{
+    background: #1884c7e3
+}
+
+.calendar-icon{
+    margin-left: 20px;
+}
+
+.date-selector{
+    border: none;
+}
+
+.calendar-footer-btns{
+    align-self: flex-end;
+}
+
+.calendar-footer-btn-container{
+    align-items: center;
+    justify-content:space-between;
+}
+
+.start-calendar-btn{
+    background-color: #EDF8FF;
+    color: #1DA1F2;
+}
+
+.start-calendar-btn:hover{
+    background-color: #1DA1F2;
+    color: white;
+}
+
+.start-calendar-btn:active{
+    background-color: #1a8dd59a;
+}
+
+@media screen and (min-width: 401px) {
+    .custom-date-button-container{
+        width: 385.9px;
+        
+    }
+}
+
+@media screen and (min-width: 518px) {
+    .flex-container{
+        flex-flow: row;
+        
+    }
+    .react-datepicker-wrapper {
+        width: max-content;
+    }
+}  
+
+@media screen and (max-width: 520px) {
+    .form-name-input{
+        width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    .date-selector{
+        width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 695px) {
+    .date-selector{
+        width: 80%;
+    }
+  }
+
+  @media screen and (min-width: 769) {
+    .calendar-icon{
+        margin-left: 20px;
+        margin-right: -10px;
+    }
+  }

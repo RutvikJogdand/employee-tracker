@@ -1,0 +1,57 @@
+.sc-ion-label-md-s h3{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.sc-ion-label-md-s p {
+    font-size: 13px;
+    line-height: 25px;
+    color: grey;
+}
+
+.sc-ion-label-md-s small {
+    font-size: 11.5px;
+    line-height: 25px;
+    color: grey;
+}
+
+.add-icon{
+    font-size: 25px;
+    margin-top: 2px;
+    color: white;
+}
+
+.add-button-container{
+    position: relative;
+    border: 1px solid #F2F2F2;
+    width: 100%;
+    height: 90px;
+    padding: 5px;
+    bottom: 0;
+    background: #F2F2F2;
+}
+
+.employee-differentiator{
+    border: 1px solid #F2F2F2;
+    width: 100%;
+    height: 50px;
+    color: #37ABF2;
+    text-align: left;
+    padding: 5px 15px;
+    font-weight: 600;
+    background: #F2F2F2;
+}
+
+.add-icon-container{
+    border:1px solid #1DA1F2;
+    width:40px;
+    padding:2px;
+    border-radius: 10px;
+    background: #1DA1F2;
+    float: right;
+}
+
+.helper-text-container{
+    float: left;
+    color: gray;
+}
