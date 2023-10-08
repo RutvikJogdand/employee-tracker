@@ -143,7 +143,7 @@ function EmployeeForm(props){
         setSaveFlag2(0)
         setFormData({
           ...formData,
-          endDate: null
+          endDate: formData.endDate ? new Date(formData.endDate) : null
         })
       }
     }
